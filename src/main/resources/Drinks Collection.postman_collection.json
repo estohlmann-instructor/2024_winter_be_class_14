@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "79051466-6136-4bef-a138-d265c3c21445",
+		"name": "Drinks Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33098884"
+	},
+	"item": [
+		{
+			"name": "Get All Drinks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/drinks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"drinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Drink By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/drinks/74d18344-b0c2-421f-8b2a-b0a9511b27e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"drinks",
+						"74d18344-b0c2-421f-8b2a-b0a9511b27e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Drink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dr. Pepper\",\r\n    \"category\": \"soda\",\r\n    \"flavors\": [\"cherry\", \"spiced\"],\r\n    \"alcoholic\": false,\r\n    \"drinkWare\": {\r\n        \"ounces\": 64,\r\n        \"shape\": \"cilindar\",\r\n        \"material\": \"plastic\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/drinks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"drinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Drink",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6bdf32d0-d9a9-4b90-8183-ef6ad402c7f3\",\r\n    \"name\": \"Bush Light\",\r\n    \"category\": \"beer\",\r\n    \"alcoholic\": true,\r\n    \"drinkWare\": {\r\n        \"ounces\": 64,\r\n        \"shape\": \"cilindar\",\r\n        \"material\": \"glass\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/drinks/6bdf32d0-d9a9-4b90-8183-ef6ad402c7f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"drinks",
+						"6bdf32d0-d9a9-4b90-8183-ef6ad402c7f3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
